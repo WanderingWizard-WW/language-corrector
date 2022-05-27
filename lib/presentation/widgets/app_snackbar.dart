@@ -7,27 +7,27 @@ class AppSnackBar extends StatefulWidget {
   AppSnackBar.success({
     Key? key,
     required this.message,
-  })  : textStyle = AppTheme.soraRegular16.copyWith(
-          color: AppTheme.green,
+  })  : textStyle = AppTheme.robotoRegular16.copyWith(
+          color: Colors.lightGreen,
         ),
         icon = const Icon(
           Icons.sentiment_very_satisfied,
-          color: AppTheme.green,
+          color: Colors.lightGreen,
           size: 104,
         ),
-        backgroundColor = AppTheme.lightGreen,
+        backgroundColor = Colors.lightGreen,
         super(key: key);
 
   AppSnackBar.error({
     Key? key,
     required this.message,
-  })  : textStyle = AppTheme.soraRegular16.copyWith(color: AppTheme.red),
+  })  : textStyle = AppTheme.robotoRegular16.copyWith(color: AppTheme.tartOrange),
         icon = const Icon(
           Icons.error_outline,
-          color: AppTheme.red,
+          color: AppTheme.tartOrange,
           size: 104,
         ),
-        backgroundColor = AppTheme.lightRed,
+        backgroundColor = AppTheme.snowColor,
         super(key: key);
 
   final String message;
