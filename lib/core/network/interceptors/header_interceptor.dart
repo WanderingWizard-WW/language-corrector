@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 
 class HeaderInterceptor implements Interceptor {
   @override
-  void onRequest(
+  Future<void> onRequest(
     RequestOptions options,
     RequestInterceptorHandler handler,
   ) async {

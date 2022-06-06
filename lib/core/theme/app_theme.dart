@@ -7,7 +7,7 @@ class AppTheme {
   static const skobeloffColor = Color(0xFF297373);
   static const orangeYellowCrayolaColor = Color(0xFFFED766);
   static const snowColor = Color(0xFFFEFEFF);
-  static const ghostWhiteColor = Color(0xFFF4F4F8);
+  static const ghostWhiteColor = Color.fromARGB(255, 248, 249, 252);
 
   static const robotoRegular16 = TextStyle(
     fontFamily: 'Roboto',
@@ -26,15 +26,19 @@ class AppTheme {
     fontSize: 12,
     letterSpacing: 0.15,
   );
-  static final robotoSemiBolt10 = robotoRegular16.copyWith(
-    fontSize: 9,
+  static final robotoRegular14 = robotoRegular16.copyWith(
+    fontSize: 14,
     letterSpacing: 0.15,
-    fontWeight: FontWeight.bold
+  );
+  static final robotoSemiBolt10 = robotoRegular16.copyWith(
+    fontSize: 10,
+    letterSpacing: 0.15,
+    fontWeight: FontWeight.w600,
   );
 
-  static final robotoMedium20 = robotoRegular16.copyWith(
-    fontSize: 20,
-    fontWeight: FontWeight.w500,
+  static final robotoBolt16 = robotoRegular16.copyWith(
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
     letterSpacing: 0.15,
   );
 
@@ -43,8 +47,14 @@ class AppTheme {
     fontWeight: FontWeight.w600,
     letterSpacing: 0.15,
   );
+  static final robotoSemiBold12 = robotoRegular16.copyWith(
+    fontSize: 12,
+    fontWeight: FontWeight.w600,
+    letterSpacing: 0.15,
+  );
 
   static ThemeData get() {
+
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(statusBarColor: Colors.white),
     );
@@ -58,26 +68,11 @@ class AppTheme {
         primary: Colors.black,
         secondary: skobeloffColor,
       ),
-      textTheme: GoogleFonts.robotoTextTheme(
-        TextTheme(
-          headline1: robotoMedium20.copyWith(
-            color: Colors.black,
-          ),
-          caption: robotoRegular10.copyWith(
-            color: Colors.black,
-          ),
-          bodyText1: robotoRegular16.copyWith(
-            color: Colors.black,
-          ),
-          button: robotoSemiBold14.copyWith(
-            color: Colors.black,
-          ),
-        ),
-      ),
+      textTheme: GoogleFonts.robotoTextTheme(),
       appBarTheme: AppBarTheme(
         color: Colors.black,
         centerTitle: false,
-        titleTextStyle: robotoMedium20.copyWith(color: Colors.white),
+        titleTextStyle: robotoBolt16.copyWith(color: Colors.white),
       ),
       inputDecorationTheme: const InputDecorationTheme(
         labelStyle: robotoRegular16,
@@ -102,15 +97,14 @@ class AppTheme {
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(32),
+            borderRadius: BorderRadius.circular(8),
           ),
           primary: skobeloffColor,
           onPrimary: Colors.black,
           padding: const EdgeInsets.symmetric(
             vertical: 16,
-            horizontal: 24,
+            horizontal: 16,
           ),
-          textStyle: robotoSemiBold14,
         ),
       ),
       textButtonTheme: TextButtonThemeData(

@@ -22,9 +22,6 @@ dependencies:
   # navigation
   auto_route: 4.0.1
 
-  # localisation
-  easy_localization: 3.0.1
-
   # networking
   dio: 4.0.6
 
@@ -39,11 +36,14 @@ dependencies:
   copy_with_extension: 4.0.2
 
   # tools
+  flutter_quill: ^5.0.3
   cupertino_icons: 1.0.4
 
   # ui
+  step_progress_indicator: ^1.0.2
   top_snackbar_flutter: 1.1.1
-  font_awesome_flutter: ^10.1.0
+#  font_awesome_flutter: ^10.1.0
+  auto_size_text: ^3.0.0
 
 
 dev_dependencies:

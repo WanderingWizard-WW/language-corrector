@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:developer';
 
 import 'package:auto_route/auto_route.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -24,7 +23,6 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
   };
 
   await di.init();
-  await EasyLocalization.ensureInitialized();
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   await runZonedGuarded(
@@ -48,6 +46,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+
       theme: AppTheme.get(),
       debugShowCheckedModeBanner: false,
       routerDelegate: AutoRouterDelegate(
